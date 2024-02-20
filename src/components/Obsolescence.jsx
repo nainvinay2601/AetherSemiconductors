@@ -1,15 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import banner from "../assets/final banner.jpg"
 
 function Obsolescence() {
   return (
     <Container>
+      <subheading>Future-proofing Your Technology</subheading>
       <h1>Obsolescence Engineering</h1>
       <p>
         Crafting Superior Semiconductor Solutions for Tomorrow's Technology.
         Partner with Us for Unmatched Performance and Reliability.
       </p>
-      <button>Explore More</button>
+
+      <img src={banner} alt="" />
+
+      <button>Explore</button>
     </Container>
   );
 }
@@ -17,35 +22,54 @@ function Obsolescence() {
 export default Obsolescence
 
 const Container = styled.div`
-  /* width:100vw ; */
-  padding: 4rem 2rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  
+  margin: 4rem 10rem;
+  margin-bottom:10rem ;
+
+  subheading {
+    font-size: 16px;
+  }
+
   h1 {
     font-size: 48px;
-
+    margin-top: 0.5rem;
     background: rgb(148, 187, 233);
     background: radial-gradient(
       circle,
       rgba(148, 187, 233, 1) 0%,
-      rgba(61, 255, 55, 1) 100%
+      #2b9c40 100%
     );
     background-clip: text;
     color: transparent;
   }
 
   p {
-    width: 520px;
-    margin-top: 1.75rem;
-    font-size: 24px;
+    font-size: 20px;
+    /* margin-top:1rem ; */
+    color: gray;
   }
   button {
-    width: 180px;
-    height: 48px;
-    margin-top: 2.75rem;
+    font-size: 16px;
     border-radius: 24px;
-    border: 2px solid white;
-    font-size: 18px;
+    height: 48px;
+    width: 160px;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    background-color: #ffffff;
+    color: black;
+    font-weight: 600;
+    border: 1px solid black;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  img {
+    width: 920px;
+    height: 420px;
+    margin-top:2rem ;
+    border-radius:10px ;
   }
 `;

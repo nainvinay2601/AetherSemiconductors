@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'General Sans', sans-serif;
-    background-color: #0D0A0B;
-    color: white;
+    /* background-color: #0D0A0B; */
+    /* color: white; */
+}
+
+html {
+    scroll-behavior: smooth;
 }

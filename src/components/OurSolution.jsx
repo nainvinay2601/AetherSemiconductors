@@ -1,63 +1,128 @@
-import React from "react";
+import React from 'react'
 import styled from "styled-components";
-import backgroundVideo from "../assets/iStock-1423825889_2.mp4"; // Replace with your video file
+import engineerPhoto from "../assets/engineering.jpeg";
 
-const ComponentWithVideoBackground = () => {
+function OurSolution() {
   return (
     <Container>
-      <video className="video-background" autoPlay loop muted playsInline>
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <subheading>Driving Innovation and Efficiency</subheading>
+      <h1>Solutions for Semiconductor Excellence</h1>
+      <p>
+        Aether Semiconductors provides cutting-edge solutions tailored to the
+        semiconductor industry. From obsolescence engineering to supply chain
+        management, our services are designed to enhance efficiency and drive
+        innovation across the semiconductor value chain.
+      </p>
 
       <Content>
-        <h1>Our Solution</h1>
-        <p>Learn more about our services and products.</p>
+        <contentInfo>
+          <contentimage>
+            <img src={engineerPhoto} alt="" />
+          </contentimage>
+          <contentname>Engineering</contentname>
+          <contentdetails>
+            Aether Semiconductors excels in precision processing and innovative
+            solutions.
+          </contentdetails>
+        </contentInfo>
+        <contentInfo>
+          <contentimage>
+            <img src={engineerPhoto} alt="" />
+          </contentimage>
+          <contentname>Engineering</contentname>
+
+          <contentdetails>
+            Aether Semiconductors excels in precision processing and innovative
+            solutions.
+          </contentdetails>
+        </contentInfo>
       </Content>
+
+      <buttonBox>
+        <button>Explore</button>
+      </buttonBox>
     </Container>
   );
-};
+}
 
-export default ComponentWithVideoBackground;
+export default OurSolution
 
 const Container = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  border: 1px solid white;
+  margin: 4rem 10rem;
 
-  .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6;
+  subheading {
+    font-size: 16px;
   }
-`;
 
-const Content = styled.div`
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: start;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  background-color: transparent; /* Set background color to transparent */
   h1 {
-    background-color: transparent;
-    color: black;
     font-size: 48px;
-    opacity:1 ;
+    margin-top: 0.5rem;
+    background: rgb(148, 187, 233);
+    background: radial-gradient(
+      circle,
+      rgba(148, 187, 233, 1) 0%,
+      #2b9c40 100%
+    );
+    background-clip: text;
+    color: transparent;
   }
 
   p {
-    background-color: transparent;
-    color: black;
+    font-size: 20px;
+    /* margin-top:1rem ; */
+    color: gray;
+  }
+
+  buttonBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      font-size: 16px;
+      border-radius: 24px;
+      height: 48px;
+      width: 160px;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2.5rem;
+      background-color: #ffffff;
+      color: black;
+      font-weight: 600;
+      border: 1px solid black;
+      margin-bottom: 2.5rem;
+      margin-top: 4rem;
+    }
+  }
+
+  border-bottom: 1px solid gray;
+`;
+
+const Content = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  contentInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  contentname {
     font-size: 24px;
+  }
+
+  contentdetails {
+    font-size: 16px;
+    color: gray;
+    width: 450px;
+  }
+
+  contentimage {
+    img {
+      height: 420px;
+      width: 450px;
+    }
   }
 `;
